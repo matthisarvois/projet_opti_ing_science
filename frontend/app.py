@@ -4,7 +4,7 @@ from sklearn import datasets
 import pandas as pd
 import plotly.express as px
 import statsmodels.api as sm
-from backend.engineering.load_dataset import main_load
+from backend.data.engineering.load_dataset import main_load
 
 data_frame = main_load()
 

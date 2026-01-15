@@ -1,9 +1,7 @@
-
-
 [project]
 name = "projet-opti-ing-science"
 version = "0.1.0"
-description = "Add your description here"
+description = "Projet Python structuré (frontend/backend/mlpipeline) avec exécution via uv"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -15,9 +13,21 @@ dependencies = [
     "streamlit>=1.53.0",
 ]
 
+# ------------------------------------------------------------
+# (OPTIONNEL mais recommandé) Configs d'outils - pas du packaging
+# ------------------------------------------------------------
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+#[tool.pytest.ini_options]
+#testpaths = ["tests"]
+#python_files = ["test_*.py"]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = []
+
+[tool.ruff.lint.isort]
+known-first-party = ["frontend", "backend", "ml_pipeline"]
