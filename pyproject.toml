@@ -1,0 +1,7 @@
+[project]
+name = "projet-opti-ing-science"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
